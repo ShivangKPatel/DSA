@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int* Stack, top=-1, n;
+int Stack[10], top=-1, n=10;
 
 void push(int x);
 int pop();
@@ -9,9 +9,9 @@ void display();
 
 int main(){
     int choice;
-    cout << "Enter total number of elements : ";
-    cin >> n;
-    Stack = new int[n];
+    // cout << "Enter total number of elements : ";
+    // cin >> n;
+    // Stack = new int[n];
     do{
         cout << "1. Push" << endl;
         cout << "2. Pop" << endl;

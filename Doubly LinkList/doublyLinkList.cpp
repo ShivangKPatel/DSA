@@ -221,7 +221,7 @@ void insertBefore(int x, int y){
         trav->prev = temp;
     }
     else   
-        cout << endl << "Element not founded" << endl << endl;
+        cout << endl << "Element not founded" << endl;
 }
 
 void insertAfter(int x, int y){
@@ -229,7 +229,7 @@ void insertAfter(int x, int y){
     if(trav != NULL){
         struct node* temp = create(x);
         temp->prev = trav;
-        if(temp->next != NULL){
+        if(trav->next != NULL){
             temp->next = trav->next;
             trav->next->prev = temp;
         }
@@ -239,7 +239,7 @@ void insertAfter(int x, int y){
         trav->next = temp;
     }
     else   
-        cout << endl << "Element not founded" << endl << endl;
+        cout << endl << "Element not founded" << endl;
 }
 
 void display(){
