@@ -138,8 +138,14 @@ void pushAtRan(int a, int b)
             temp1 = temp1->link;
         }
     }
-    temp->link = temp1;
-    pre->link = temp;
+    if(temp1 == First){
+        temp->link = First;
+        First = temp;
+    }
+    else{
+        temp->link = temp1;
+        pre->link = temp;
+    }
 }
 
 void deleteLast(){
