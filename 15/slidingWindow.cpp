@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 void usingUnorderdSet(int ele[], int n, int k){
     unordered_set<int> Set;
     for(int i = 0;i < n-k+1; i++){
@@ -10,16 +9,13 @@ void usingUnorderdSet(int ele[], int n, int k){
                 Set.insert(ele[j]);
             }
         }
-        cout << Set.size();
+        cout << Set.size() << " ";
         Set.clear();
     }
 }
 
-void usingMap(int arr[], int n, int k){
-    
-}
-
 int main(){
+    cout << "This program is prepared by 22CE097_ShivangPatel." << endl << endl;
     int n, k;
     cin >> n >> k;
     int ele[n];
@@ -27,6 +23,5 @@ int main(){
         cin >> ele[i];
     }
     usingUnorderdSet(ele, n, k);
-    usingMap(ele, n, k);
     return 0;
 }

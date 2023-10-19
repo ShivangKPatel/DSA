@@ -8,25 +8,27 @@ struct node{
 
 struct node* First = NULL;
 
-struct node* Create(int n);
-void pushAtFirst(int x);
-void pushAtEnd(int x);
-void pushAtRan(int a, int b);
+struct node* Create(int);
+void pushAtFirst(int);
+void pushAtEnd(int);
+void pushAtRan(int, int);
 void deleteLast();
 void deleteFirst();
 void deleteAll();
+void deleteNthNode(int);
 void display();
 
 int main(){
     int choice;
     cout << "This program is developed by 22CE097_ShivangPatel" << endl << endl;
     do{
-        cout << "1. Insert node at front." << endl;
-        cout << "2. Inset node at end." << endl;
+        cout << "1. Insert node at top (front/ first)." << endl;
+        cout << "2. Inset node at bottom (end/ last)." << endl;
         cout << "3. Inset node before specific value." << endl;
-        cout << "4. Delete node at last." << endl;
-        cout << "5. Delete node at front." << endl;
+        cout << "4. Delete node at top (front/ First)." << endl;
+        cout << "5. Delete node at bottom (end/ last)." << endl;
         cout << "6. Delete all the nodes." << endl;
+        cout << "9. Delet nth Node. " << endl;
         cout << "7. Display" << endl;
         cout << "8. Exit" << endl;
         cout << "Select operation : ";
@@ -79,6 +81,13 @@ int main(){
                 break;
 
             case 8:
+                break;
+
+            case 9:
+                int c;
+                cout << "Enter a number : ";
+                cin >> c;
+                deleteNthNode(c);
                 break;
 
             default:
@@ -198,4 +207,15 @@ void display(){
         temp1=temp1->link;
     }
     cout << endl << endl;
+}
+
+void deleteNthNode(int n){
+    struct node* trav = First;
+    struct node* pre = trav;
+    while(n!=1){
+        pre = trav;
+        trav = trav->link;
+        n--;
+    }
+    pre->link = trav->link;
 }

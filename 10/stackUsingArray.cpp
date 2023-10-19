@@ -49,7 +49,7 @@ int main(){
                 break;
         }
     }while(choice!=4);
-    delete Stack;
+    // delete Stack;
 }
 
 void push(int x){
